@@ -12,15 +12,15 @@ def index(req):
 
 
 @login_required
-def articles(req):
+def books(req):
     tmp = Article.objects.all()
-    return render(req, 'articles.html', {'articles': tmp})
+    return render(req, 'books.html', {'articles': tmp})
 
 
 @login_required
 def article(req, id):
     tmp = get_object_or_404(Article, id=id)
-    return render(req, 'article.html', {'article': tmp, 'page_title': tmp.title})
+    return render(req, 'book.html', {'article': tmp, 'page_title': tmp.title})
 
 
 @permission_required('app_biblioteka.change_article')

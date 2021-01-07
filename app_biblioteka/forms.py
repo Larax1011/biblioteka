@@ -3,8 +3,8 @@ import django.forms as f
 from .models import Article
 
 
-class ArticleForm(ModelForm):
+class BookForm(ModelForm):
     class Meta:
-        model = Article
+        model = Book
         fields = ['title', 'content']
 
