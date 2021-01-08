@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'vezbe11.urls'
+ROOT_URLCONF = 'biblioteka.urls'
 
 TEMPLATES = [
     {
@@ -78,15 +78,15 @@ WSGI_APPLICATION = 'biblioteka.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'demo_baza',
-        'HOST': '192.168.1.168',
+        'NAME': 'SkriptProj2Baza',
+        'HOST': 'localhost',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': 'password'
     }
 }
 
-LOGIN_REDIRECT_URL = '/articles'
+LOGIN_REDIRECT_URL = '/books'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

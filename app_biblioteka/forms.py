@@ -1,6 +1,6 @@
 from django.forms import ModelForm, Form
 import django.forms as f
-from .models import Article
+from .models import Book
 
 
 class BookForm(ModelForm):
