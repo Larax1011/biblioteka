@@ -35,6 +35,19 @@
                 </div>
             {% endif %}
         </div>
+        <div class="form-group">
+                <label for="{{ form.author.id_for_label }}">{{ form.author.label_tag }}</label>
+                <input class="form-control" id="{{ form.author.id_for_label }}" name="{{ form.author.name }}" rows="5"></input>
+                {% if form.author.errors %}
+                    <div class="alert alert-danger">
+                        <ul style="text-align: left">
+                            {% for error in form.author.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
 
         <input type="submit" class="btn btn-primary btn-lg" value="Add"/>
     </form>
